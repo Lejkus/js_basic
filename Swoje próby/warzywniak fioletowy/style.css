@@ -1,0 +1,323 @@
+/* Global Settings */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+  }
+  
+  html {
+    font-size: 10px;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  
+  /* Nav Styling */
+  
+  nav {
+    background-color:rgb(64, 16, 112);
+    display: flex;
+    height: 10vh;
+    padding: 10px;
+    position:relative;
+    justify-content: space-between;
+  }
+  
+  /* Burger Styling */
+  
+  .burger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+  }
+  
+  .line {
+    width: 40px;
+    height: 4px;
+    background: rgb(0, 71, 163);
+    margin: 10px;
+    border-radius: 10px;
+  }
+  
+  
+  
+  /*transformers*/
+ul {
+  list-style-type: none;
+  display: flex;
+  width: 20vh;
+  justify-content: space-around;
+  position: absolute;
+  left: 0;
+  top: 10vh;
+  background-color: rgb(81, 20, 141);
+  height: 90vh;
+  flex-direction: column;
+  text-align: center;
+  transform: translate(0%);
+  transition: .4s ease-in-out;   
+}
+
+ul.active {
+    transform: translate(-100%);
+}
+a {
+    color: whitesmoke;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+
+.sekcja{
+    display: flex;
+    margin-left:20vh ;
+    /*background-image: url("images/tło.jpg");*/
+    background-image: linear-gradient(238deg, rgba(252, 89, 241, 1) 0%, rgba(114, 28, 198, 1) 75%);
+    width: auto;
+    height: 90vh;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    overflow:auto;
+    transition: .4s ease-in-out;
+    
+}
+.sekcja.active{
+  background-image: linear-gradient(238deg, rgba(252, 89, 241, 1) 0%, rgba(114, 28, 198, 1) 75%);
+  margin-left:0vh ;
+}
+
+#okno {
+    display: flex;
+    margin: 50px 20px;
+    padding: 20px;
+    width: 300px;
+    height: 350px;
+    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 0.521);
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    transition: transform 0.3s linear;
+
+
+}
+
+
+.ikona {
+    width: 200px;
+    height: 200px;
+    justify-content: center;
+    border-radius: 10px;
+}
+.price {
+    font-size: 15px;
+    font-weight: bold;
+}
+.shop-item-button{
+    width: 110px;
+    height: 30px;
+    border: none;
+    background-color:rgba(26, 26, 26, 0.788);
+    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 0.521);
+    border-radius:20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.opis {
+    font-size: 15px
+}
+#okno:hover{
+  transform: scale(1.2);
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 0.733);
+
+}
+
+/*przycisk*/
+#input {
+  width: 50px;
+  height: 50px;
+}
+
+li{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.owoce {
+  position: absolute;
+  visibility:hidden;
+  display:none;
+}
+.owoce.active{
+  position:relative;
+  visibility:visible;
+}
+
+
+.warzywa {
+  position: absolute;
+  visibility:hidden;
+  display:none;
+}
+.warzywa.active{
+  position:relative;
+  visibility:visible;
+}
+
+
+/*koszyk*/
+
+
+.koszyk {
+  width: 60px;
+  height: 79px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-right: 100px;
+  font-size: 20px;
+}
+
+
+/*koszyk wyjadea*/
+.zakupy {
+  display: flex;
+  width: 40vh;
+  height: 90vh;
+  justify-content: flex-start;
+  align-items: flex-end;
+  position: absolute;
+  right: 0;
+  top: 10vh;
+  overflow:auto;   
+  background-color: rgb(211, 61, 201);
+  flex-direction: column;
+  text-align: center;
+  transform: translate(0%);
+  transition: .4s ease-in-out;  
+}
+
+.zakupy.active {
+  transform: translate(100%);
+}
+
+.sekcja.koszyk{
+  display: flex;
+  margin-right:40vh ;
+  background-image: linear-gradient(238deg, rgba(252, 89, 241, 1) 0%, rgba(114, 28, 198, 1) 75%);
+  width: auto;
+  height: 90vh;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: flex-start;
+  overflow:auto;
+  transition: .4s ease-in-out;
+}
+
+
+#produkt {
+  display: flex;
+  margin: 30px 20px;
+  padding: 20px;
+  width: 350px;
+  height: 150px;
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 0.521);
+  flex-direction: row;
+  border-radius: 10px;
+  transition: transform 0.3s linear;
+}
+
+#produkt:hover {
+  transform: scale(1.1);
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 0.897);
+}
+
+.ikonaprodukt {
+  width: 100px;
+  height: 100px;
+  justify-content: center;
+  border-radius: 10px;
+}
+.priceprodukt {
+  font-size: 20px;
+  font-weight: bold;
+  margin-left: 50px;
+}
+
+.opisprodukt {
+  margin-left: 50px;
+  font-size: 20px
+}
+
+#ladnie {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-around;
+  align-items: center;
+}
+.buyprodukt {
+  margin: 30px 20px;
+  border-radius: 20px;
+  background-color: rgba(114, 28, 198, 1);
+  border: hidden;
+  height: 50px;
+  width: 350px;
+
+}
+
+.buyprodukt:hover{
+  background-color: rgb(113, 19, 150);
+}
+.usun{
+  width: 60px;
+  height: 80px;
+  border-radius: 20px;
+  border: hidden;
+  background: none;
+  cursor: pointer;
+  font-size: 15px;
+  margin-right: 20px;
+}
+
+.usun:hover{
+  background-color: rgba(80, 0, 0, 0.603);
+}
+
+
+input[type="checkbox"]{
+  appearance: none;
+  height: 80px;
+  width: 80px;
+  background-color: red;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked{
+  content: '\2713';;
+  background-color: green;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(54, 0, 104, 0.445);
+  border-radius: 10px;
+}

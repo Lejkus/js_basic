@@ -1,0 +1,43 @@
+const Names = function(){
+    //34
+    //zwraca wartość statu   , zwraca funkcje do edytowania stanu
+    const [showNameState, setShowNameState] = React.useState(true)
+    const names = ['kevin','marian','janek']
+    const nameList = names.map(name => <li key={name}>{name}</li> )
+    //const showName = true
+    //gdy chcemy ukryć
+    //const toogleNames = () => {setShowNameState(false)}
+    //gdy toogle
+    const toogleNames = () => {setShowNameState(!showNameState)}
+
+    return (
+      <div>
+        {showNameState ? <ul>{nameList}</ul> : 'brak imion'}
+        <button onClick={toogleNames}>Toogle names</button>
+      </div>
+      )
+    }
+
+
+  class Headline extends React.Component{
+      state = {
+        title:'Siemandero'
+      }
+
+      render(){ //JSX
+          
+          const changeTitle = () => { 
+            this.setState({title: 'slakdfblais'})
+          }
+
+          return (
+            <div>
+              <h1>Hello {this.state.title}</h1>
+                <Names/>
+                <button onClick={changeTitle} >Change titel</button>
+            </div>
+          )
+      }
+  }
+
+ReactDOM.render(<Headline />,document.querySelector('#app'))

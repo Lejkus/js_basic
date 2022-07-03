@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+/* zeby nie bylo marginesów stron */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    /*Dzięki temu dzieci, które się w nim znajdują mogą:
+    -zostać ułożone w dowolnym kierunku: w lewo, prawo, w dół a nawet w górę,
+    -zostać ustawione w dowolnej kolejności,
+    -dopasować swoje rozmiary do rozmiaru rodzica, aby nie marnować przestrzeni,
+    -wyrównywać się do siebie nawzajem,
+    -mieć jednakową wysokość niezależnie od ilości treści, którą zawierają */
+    display: flex;
+    /* centrujemy kontent */
+    justify-content: center;
+    align-items: center;
+
+    
+}
+/* ostylujemy naszego forma i flexem wszystko ustawimy na srodku i pod soba */
+
+
+/* napis login */
+h1 {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.548);
+
+/* ten kwadrat gdzie są te dane */
+}
+form {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    /* centrujemy kontent */
+    justify-content: center;
+    align-items: center;
+    /* zeby bylo pod soba */
+    flex-direction: column;
+    /* te wyjebiste cienie */
+    box-shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.418);
+    /* Styl definiuje wielkość dopełnienia dla elementu. Za pomocą tego jednego polecenia można ustalić wszystkie, następujące właściwości dopełnienia: padding-bottom, padding-top, padding-right, padding-left. Jedno polecenie zamiast kilku jest po prostu wygodne w stosowaniu */
+    padding: 20px 30px;
+}
+
+/* to są te wszystkie rzeczy w kwadracie*/
+.form-section {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    height: 60px;
+    /* poniewaz chcemy zeby był połaczony napis względem diva */
+    position: relative;
+    /* Za pomocą wartości hidden właściwości overflow możemy sprawić, że treść niemieszcząca się w obszarze wyznaczonym przez zewnętrzną krawędź prawego lub dolnego wewnętrznego marginesu interesującego nas elementu HTML zostanie ukryta*/
+    overflow: hidden;
+}
+/* to są te inputy gdzie sie wpisuje*/
+.form-input {
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    /* daje w jakiej pozycji wpisuje sie tekst czy na dole góry itp */
+    padding-top: 30px;
+    /* tu że zaczyna sie 3px od lewej */
+    padding-left: 3px;
+    /* brak ramek*/
+    border:none;
+    /* to cos pozaramka*/
+    outline: none;    
+}
+/*te napisy Name i Hasło*/
+.input-label {
+    position: absolute;
+    /* solid to że jest solidny*/
+    /* dol napisu*/
+    border-bottom: 1px solid rgba(0, 0, 0, 0.308);
+    width: 100%;
+    height: 100%;
+    /* bo to zasłanie inputa i trzeba to zrobic none */
+    pointer-events: none;
+}
+
+.input-label::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-image: linear-gradient(90deg, #0162c8, #55e7fc);
+    left: 0%;
+    bottom: -1%;
+    /* przemienia to tak żeby nie było widać*/
+    transform: translateX(-101%);
+    /*efekt przejscia link :http://www.kurshtmlcss.pl/kurs-css/lekcja19-transition.php */
+    transition: all .3s ease;
+}
+/*tu jeśli klikniemy to własnie zmienia tak żeby było widać */
+.form-input:focus + .input-label::after {
+    transform: translateX(0%);
+}
+
+/*napisy*/
+.label-name {
+    position: absolute;
+    bottom: 2px;
+    transition: all .3s ease;
+}
+
+.form-input:focus + .input-label .label-name{
+    bottom: 35px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #0162c8
+}
+/*to jest po to żeby jak wpiszesz to żeby Name ci nie wskoczyło na login*/
+.form-input:valid +.input-label .label-name{
+    bottom: 35px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #0162c8
+}
+
+button {
+    font-size: 20px;
+    width: 80%;
+    margin-top: 25px;
+    background-image: linear-gradient(90deg, #0162c8, #55e7fc);
+    border: none;
+    padding: 5px,0px;
+    color: white;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

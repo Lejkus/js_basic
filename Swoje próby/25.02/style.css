@@ -1,0 +1,403 @@
+html {
+    scroll-behavior: smooth;
+  }  
+body {
+    margin-top: 0;
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+    animation: start 1s linear ; 
+}
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255); 
+    border-radius: 10px;
+  }
+
+#home {
+    height: 850px;
+    width: 100%;
+}
+nav{
+    position: fixed;
+    height: 160px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    animation: start 3s linear ;
+    z-index: 5;
+}
+
+.tlo{
+    position: absolute;
+    right: 0%;
+    bottom: 0%; 
+    width: 1200px;
+    height: 800px;  
+    margin: 1%;
+    margin-right: 3%;
+    margin-bottom: 1.5%;
+    box-shadow: 0px 0px 78px -10px rgba(255, 255, 255, 1);
+}
+.logotekst{
+    position:absolute;
+    width: 400px;
+    height: 120px;
+    margin: 1.5%;
+    cursor: pointer;
+}
+.logo{
+    position:absolute;
+    width: 400px;
+    height: 120px;
+    margin: 1.5%;
+}
+
+.odnosnik{
+    display: flex;
+    position: fixed;
+    width: 1000px;
+    height: 100px;
+    right: 10%;
+    align-items: flex-end;
+    justify-content: space-around;
+    font-size: 25px;
+    color: white;
+}
+
+.napis{
+    display: flex;
+}
+
+h1{
+    position:absolute;
+    height: 500px;
+    width: 600px;
+    color: white;
+    font-size: 100px;
+    left: 18%;
+    top: 25%;
+    font-weight: 500;
+    opacity: 0;
+}
+
+.wiecej{
+    position:absolute;
+    height: 70px;
+    width: 400px;
+    left: 18%;
+    top: 70%;
+    font-size: 22px;
+    background: none;
+    color: white;
+    border-color:rgba(255, 255, 0, 0.8);
+    box-shadow: 0px 0px 20px 0px rgba(255, 255, 0, 0.8);
+    background-color: rgba(255, 255, 0, 0.4);
+    transition: background-color 0.4s ease-in;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.wiecej:hover{
+    background-color:rgba(255, 255, 0, 0.767) ;
+}
+
+.kwadrat{
+    width: 120px;
+    height: 10px;
+    background-color:rgba(255, 255, 0, 0.8);
+    box-shadow: 0px 0px 70px 8px rgba(255, 255, 0, 0.8);
+}
+
+
+
+.slide-left{
+    animation: slideleft 1s linear forwards ;
+}
+
+@keyframes slideleft {
+    0%{
+        transform: translate(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes start {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+h1.slide-left {
+    animation-delay: 1s;
+}
+
+button.slide-left {
+    animation-delay: 2s;
+}
+
+.kwadrat2{
+    width: 100%;
+    height: 5px;
+    background-color:rgba(255, 255, 0, 0.8);
+    box-shadow: 0px 0px 70px 8px rgba(255, 255, 0, 0.8);
+    opacity: 0;
+    transform:  translate(-50%);
+    transition: transform 0.5s ease-in;
+}
+
+.Home {
+    cursor: pointer;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+}
+.Home:hover .kwadrat2{
+    opacity: 1;
+    transform:  translate(0%);
+}
+
+
+/*2 strona*/
+
+#about{
+    margin: 0;
+    position:relative;
+    top: 90%;
+    display: flex;
+}
+
+
+.margines {
+    margin-top: 9%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+
+/*najechanie na zdj*/
+.image {
+    position: relative;
+    height: 400px;
+    width: 55   0px;
+    margin: 10px;
+}
+
+.image__img {
+    display: block;
+    width: 550px;
+    height: 400px;
+}
+
+.image__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 550px;
+    height: 400px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.image__overlay--blur {
+    backdrop-filter: blur(5px);
+}
+
+
+.image__overlay > * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.image__overlay:hover {
+    opacity: 1;
+}
+
+.image__overlay:hover > * {
+    transform: translateY(0);
+}
+
+.image__title {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.image__description {
+    font-size: 1.25em;
+    margin-top: 0.25em;
+}
+
+
+/*Telefon*/
+@media only screen and (max-width: 1000px) {
+    body{
+        width:100%;
+        margin: 0;
+    }
+
+    .logotekst{
+        display: none;
+    }
+
+    nav{
+        height: 100px;
+        width: 100%;
+        left: 0;
+    }
+    .odnosnik{
+        position: fixed;
+        justify-content: center;
+        width: auto;
+        align-items: center;
+        margin-left: 30%;
+    }
+    .Home{
+        margin: 20px;
+    }
+    .slide-left{
+        left: 0%;
+    }
+    h1{
+        font-size: 80px;
+    }
+    .tlo{
+        width: 100%;
+        height: 90%;
+    }
+
+}
+@media only screen and (max-width: 1450px) {
+    .logotekst{
+        display: none;
+    }
+}
+
+
+
+
+/*3*/
+
+#service{
+    display: flex;
+    position:relative;
+    width: 99%;
+}
+
+.margines1{
+    margin-top: 5%;
+}
+
+  
+  #slider {
+    margin: 20px;
+    margin-left: 50px;
+    width: 1000px;
+    height: 700px;
+    
+  }
+  
+  #slider #top-row {
+    width: 1000px;
+    height: 700px;
+    overflow: hidden;
+
+  }
+  
+  #slider #top-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #slider .slide {
+    display: none;
+    width: 100%;
+    flex: 1;
+  }
+  
+  #slider .slide.active {
+    display: block;
+    animation: zdj 1s linear ; 
+    border-radius: 20px 150px 20px 150px;
+
+  }
+  
+  #slider #bottom-row {
+    display: flex;
+    justify-content: center;
+  }
+
+  .arrow {
+    margin: 0 5px;
+  }
+  
+  .arrow,
+  .dot {
+    cursor: pointer;
+  }
+
+
+  @keyframes zdj {
+    0%{
+        opacity: 0.5;
+        transform:  translate(10px, 0px) skew(10deg, 0deg);
+    }
+    100%{
+        opacity: 1;
+        transform:  translate(0px, 0px) skew(0deg, 0deg);
+
+    }
+}
+
+
+.tekst{
+    position: absolute;
+    top: 15%;
+    right: 0%;
+    width: 750px;
+    text-align: center;
+}
+
+
+h2{
+    color: white;
+    font-size: 65px;
+    font-weight: 500;
+}
+
+a{
+    color: white;
+    font-size: 55px;
+    font-weight: 500;
+}
+
+
+.kwadrat1{
+    position: absolute;
+    right: 0%;
+    top: 5%;
+    width: 450px;
+    height: 10px;
+    background-color:rgba(255, 255, 0, 0.8);
+    box-shadow: 0px 0px 70px 8px rgba(255, 255, 0, 0.8);
+}

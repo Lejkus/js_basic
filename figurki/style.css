@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+}
+
+.calosc{
+
+    display: flex;
+}
+
+.navbar{
+    background-color: antiquewhite;
+    width: 100px;
+    height: 100vh;
+}
+
+.prawo{
+    background-color: aliceblue;
+    width: calc(100vw - 100px);
+    height: 100vh;
+}

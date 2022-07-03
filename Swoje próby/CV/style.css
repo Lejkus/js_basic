@@ -1,0 +1,137 @@
+body{
+    font-family: Arial;
+    background-color:rgb(238, 250, 255);
+    padding: 40px 0px;
+}
+h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3{
+    margin-top: 5px;
+}`
+
+span {
+    color:wheat;
+}
+img {
+    width: 180px;
+    height: 180px;
+}
+.calosc {
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.377);
+    width: 960px;
+    margin: 0 auto;
+    background-color:white;
+}
+
+section,header{
+    padding: 10px 60px 20px 60px;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 60px;
+}
+
+/*gorne ul bez kropek*/
+header ul {
+    list-style: none;
+}
+/*gorne li*/
+li {
+    margin-bottom: 15px;
+}
+
+.icon {
+    width: 16px;
+    height: 16px;
+    background-color: black;
+    margin-right: 10px;
+    padding: 8px;
+    /*wyrównanie pionowe tylko dla elementów display inline*/
+    vertical-align: middle;
+}
+.kolo {
+    border-radius: 100%;
+}
+
+.maleikonki {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    padding: 8px;
+    vertical-align: middle;
+}
+
+.hobby {
+    list-style:none ;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: none;
+    box-shadow: 10px 10px 20px 1px rgba(0, 0, 0, 0.185);
+}
+.hobby li {
+    width:50%;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.hobby div {
+    margin-left: 20px;
+}
+
+.hobby p {
+    color: grey ;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.download-link {
+    border: 2px solid rgb(0, 0, 0) ;
+    color: white;
+    /*podkreślenie*/
+    text-decoration: none;
+    padding: 10px 20px;
+    /*dalej bedzie wyswietlał sie w 1 lini tak jak display inline , jednak dodanie marginesu w pionie poskutkuje przeniesieniem sie elementów tak jak z display block*/
+    display:inline-block ;
+    margin-top: 20px ;
+    border-radius: 30px;
+    background-color:rgba(255, 0, 0, 0.685) ;
+    /*CUDOOOOOOOOOOOOOOO!!!!!!!!!!!!!!!!!!*/
+    /*przejście, jeśli kiedykolwiek sie zmienie to 0,5sek*/
+    transition: background-color 0.5s,/*tu że kolor czciaki*/color 0.5s;
+    box-shadow: 5px 5px 10px gray;
+}
+
+/*ten dwukropek pokazuje stan w jakim cos chcemy zmienić*/
+/*hover-najechanie*/
+/*focous-shift+tab*/
+/*active-gdy klikamy prawy przycisk*/
+
+.download-link:hover{
+    color: white;
+    background-color: rgba(38, 0, 255, 0.589);
+}
+
+/*nie wiem XDD*/
+.download-link:focus{
+    outline: none;
+    color: white;
+    background-color: rgba(38, 0, 255, 0.589);
+}
+.download-link:active {
+    text-decoration: underline;
+}

@@ -1,0 +1,484 @@
+*{
+    font-family: Arial ;
+}
+
+:root{
+    --nav-height: 80px;
+}
+
+body{
+    margin: 0;
+}
+/*header*/
+header{
+    display: flex;
+    background-color: #006e7a;
+    height: var(--nav-height);
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.logodiv{
+    height: 55px;
+    width: 100px; 
+ }
+ 
+.logo{
+    margin-top: -15px;
+    height: 55px;
+    width: 100px; 
+}
+.ikony{
+    display: flex;
+    width: 680px;
+    justify-content: space-between;
+}
+
+.ikonadivczat{
+    display: flex;
+    height: 55px;
+    width: 150px; 
+    justify-content: space-between;
+}
+
+.ikonadivserce{
+    display: flex;
+    height: 55px;
+    width: 120px; 
+    justify-content: space-between;
+}
+
+.ikonadivczlowiek{
+    position: relative;
+    display: flex;
+    height: 55px;
+    width: 120px; 
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.ikona{
+    height: 30px;
+    width: 30px; 
+}
+
+.przypisek{
+    margin-top: 5px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.dodajogloszenie-btn{
+    width: 180px;
+    height: 60px;
+    margin-top: -15px;
+    margin-left: 40px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    border: none;
+    font-size: 17px;
+    font-weight: 600;
+    transition: all 0.5s ease-in-out;
+    z-index: 3;
+}
+
+.dodajogloszenie-btn:hover{
+    background-color: #004047;
+    color: white;
+}
+
+.wysunczlowiek{
+    position: absolute;
+    background-color: white;
+    width: 200px;
+    top: 40px;
+    left: -30px;
+    border-radius: 5px;
+    transition: all 5s ease;
+    overflow: hidden;
+    opacity:0;
+    height: 0;
+    box-shadow: 0px 0px 22px 0px rgba(181, 181, 181, 1);
+    transition: height 0.6s;
+}
+
+.wysunczlowiek.active{
+    opacity: 100;
+    height: 900%;
+}
+
+.wysunczlowiek li {
+    list-style: none;
+    padding: 20px 5px;
+    cursor: pointer;
+}
+
+.wysunczlowiek ul {
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.wysunczlowiek li:hover{
+    background-color: rgb(223, 223, 223);
+}
+
+.dodajogloszenie{
+    position: absolute;
+    top: var(--nav-height);
+    right: 30px;
+    background-color: rgb(223, 223, 223);
+    height: 400px;
+    width: 500px;
+    opacity: 0;
+    visibility: collapse;
+}
+
+.dodajogloszenie.active{
+    opacity: 1;
+    visibility: visible;
+
+}
+
+.dodaj{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 22px 0px rgba(181, 181, 181, 1);
+}
+
+.dodaj > input , select{
+    width: 80%;
+    padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  
+}
+
+.dodaj > button{
+    width: 80%;
+}
+
+
+/*wyszukiwarka*/
+.wyszukiwanie{
+    background-color: rgba(221, 219, 219, 0.555);
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.szukaniediv{
+    display: flex;
+    background-color: white;
+    align-items: center;
+    margin-left: 1px;
+}
+
+.ikonawyszukaj{
+    padding-left: 20px;
+    padding-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.inputglowny{
+    height: 60px;
+    width: 70vh;
+    background: none;
+    border: none;
+}
+
+.inputglowny:focus{
+    outline: none;
+}
+
+.inputlokalizacja{
+    height: 60px;
+    width: 30vh;
+    background: none;
+    border: none;
+}
+
+.ikonamapa{
+    padding-left: 20px;
+    padding-right: 10px;
+    width: 20px;
+    height: 20px;  
+}
+
+.inputlokalizacja:focus{
+    outline: none;
+}
+
+.przyciskszukanie{
+    display: flex;
+    height: 62px;
+    width: 130px;
+    background-color: white;
+    margin-left: 1px;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.szukaj{
+    font-weight: 600;
+    font-size: 15px;
+    cursor:pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.przyciskszukanie:hover{
+    background-color: #006e7a;
+    color: white;
+}
+
+
+
+
+
+
+/*kategorie*/
+
+.kategorie{
+    display: flex;
+    background-color: white;
+    height: 600px;
+    justify-content: center;
+}
+
+.kategorietytul{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    height: 50px;
+    position: absolute;
+}
+
+.kategoriewszystkie{
+    display: flex;
+    margin-top: 100px;
+    width: 120vh;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.kategoriadiv{
+    display: flex;
+    width: 130px;
+    height: 170px;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.ikonakategori{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.podpiskategoria{
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*oglosznia*/
+.ogloszenia{
+    background-color: rgba(221, 219, 219, 0.555);
+    height: auto;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    padding-left: 10%;
+}
+
+
+
+.ogloszenieokno{
+    display:flex ;
+    background-color: white;
+    height: 378px;
+    width: 350px;
+    margin: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+
+.zdjecie-ogloszenie-div{
+    height: 218px;
+    line-height: 218px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.zdjecie-ogloszenie{
+    width: 90%;
+}
+
+.napisy{
+    display: flex;
+    width: 90%;
+    height: 26%;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6%;
+}
+
+
+.tytulogl-oszenie{
+    font-size: 20px;
+    margin-bottom: 10%;
+}
+
+.lokalizacja-data{
+    font-size: 13px;
+    color: rgb(80, 79, 79);
+    margin-bottom: 4%;
+}
+
+.cena-ikonka{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.serce{
+    position: relative;
+    top: -20px;
+    right: 20px;
+}
+.cena-ogloszenie{
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 450px) {
+    header{
+        overflow: hidden;
+    }
+    .wyszukiwanie{
+        overflow: hidden;
+    }
+    .kategorie{
+        height: 320px;
+    }
+    .kategoriewszystkie{
+        flex-wrap: nowrap;
+        overflow: scroll;
+    }
+
+    .ogloszenia{
+        padding: 0;
+    }
+    .ogloszenieokno{
+        margin: 5px;
+        width: 180px;
+        height: 250px;
+        justify-content: space-between;
+    }
+    .zdjecie-ogloszenie-div{
+        height: auto;
+    }
+    .tytulogl-oszenie{
+        font-size: 16px;
+    }
+    .lokalizacja-data{
+        font-size: 12px;
+    }
+    .serce{
+        opacity: 0;
+    }
+    .kategorie{
+        height: auto;
+    }
+    .kategoriewszystkie{
+        margin-top: 0;
+    }
+    .kategorietytul{
+        display: none;
+    }
+    .kategoriadiv{
+        margin: 20px;
+    }
+    .dodajogloszenie.active{
+        width: 300px;
+        z-index: 10;
+    }
+    .przypisek{
+        display: none;
+    }
+    .ikony{
+        margin-left: 20px;
+    }
+    .ikonadivserce{
+        width: 55px;
+    }
+    .ikonadivczlowiek{
+        width: 55px;
+    }
+    .ikonadivczat{
+        width: 55px; 
+    }
+    .dodajogloszenie-btn{
+       margin-left: 0;
+    }
+    .logodiv{
+        margin-bottom: 10px;
+        width: 50%;
+        height: 50%;
+    }
+    .dodajogloszenie-btn{
+        width: 65%;
+    }
+    .wyszukiwanie   {
+        overflow: scroll;
+    }
+    .szukaniediv{
+        width: 50%;
+    }
+}
+
+.brak{
+    height: 200px;
+    font-size: 40px;
+    color: rgb(114, 114, 114);
+    width: 200vw;
+    margin-left: -10%;
+    text-align: center;
+}

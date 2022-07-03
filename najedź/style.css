@@ -1,0 +1,7 @@
+.show-img:hover:after {
+    content: url(zdjecie.jpg);
+    display: block;
+    position:relative;
+    left: 5px;
+    z-index: 100;
+  }
